@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  capacity: 1
+  projector: false
+  sound: false
+  mic: false
+
+two:
+  title: MyString
+  capacity: 1
+  projector: false
+  sound: false
+  mic: false

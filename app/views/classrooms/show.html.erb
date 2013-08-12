@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @classroom.title %>
+</p>
+
+<p>
+  <b>Capacity:</b>
+  <%= @classroom.capacity %>
+</p>
+
+<p>
+  <b>Projector:</b>
+  <%= @classroom.projector %>
+</p>
+
+<p>
+  <b>Sound:</b>
+  <%= @classroom.sound %>
+</p>
+
+<p>
+  <b>Mic:</b>
+  <%= @classroom.mic %>
+</p>
+
+
+<%= link_to 'Edit', edit_classroom_path(@classroom) %> |
+<%= link_to 'Back', classrooms_path %>

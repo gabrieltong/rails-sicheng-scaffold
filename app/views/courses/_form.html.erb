@@ -1,0 +1,77 @@
+<%= form_for(@course) do |f| %>
+  <% if @course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% @course.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :projector %><br />
+    <%= f.check_box :projector %>
+  </div>
+  <div class="field">
+    <%= f.label :sound %><br />
+    <%= f.check_box :sound %>
+  </div>
+  <div class="field">
+    <%= f.label :mic %><br />
+    <%= f.check_box :mic %>
+  </div>
+  <div class="field">
+    <%= f.label :capacity %><br />
+    <%= f.number_field :capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br />
+    <%= f.text_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :cycle %><br />
+    <%= f.text_field :cycle %>
+  </div>
+  <div class="field">
+    <%= f.label :frequency %><br />
+    <%= f.text_field :frequency %>
+  </div>
+  <div class="field">
+    <%= f.label :section_size %><br />
+    <%= f.number_field :section_size %>
+  </div>
+  <div class="field">
+    <%= f.label :kind %><br />
+    <%= f.text_field :kind %>
+  </div>
+  <div class="field">
+    <%= f.label :join_class %><br />
+    <%= f.check_box :join_class %>
+  </div>
+  <div class="field">
+    <%= f.label :form %><br />
+    <%= f.text_field :form %>
+  </div>
+  <div class="field">
+    <%= f.label :video_makeup %><br />
+    <%= f.check_box :video_makeup %>
+  </div>
+  <div class="field">
+    <%= f.label :make_value %><br />
+    <%= f.text_field :make_value %>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br />
+    <%= f.text_area :remark %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

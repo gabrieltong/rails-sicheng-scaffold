@@ -1,0 +1,23 @@
+<h1>Listing market_activities</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @market_activities.each do |market_activity| %>
+  <tr>
+    <td><%= market_activity.title %></td>
+    <td><%= link_to 'Show', market_activity %></td>
+    <td><%= link_to 'Edit', edit_market_activity_path(market_activity) %></td>
+    <td><%= link_to 'Destroy', market_activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Market activity', new_market_activity_path %>

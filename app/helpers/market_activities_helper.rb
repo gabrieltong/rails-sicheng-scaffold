@@ -1,0 +1,2 @@
+module MarketActivitiesHelper
+end

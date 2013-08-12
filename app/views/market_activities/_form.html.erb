@@ -1,0 +1,21 @@
+<%= form_for(@market_activity) do |f| %>
+  <% if @market_activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@market_activity.errors.count, "error") %> prohibited this market_activity from being saved:</h2>
+
+      <ul>
+      <% @market_activity.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
